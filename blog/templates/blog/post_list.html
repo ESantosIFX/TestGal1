@@ -3,6 +3,13 @@
 		<title>TestGal Blog--</title>
 	</head>
 	<body>
+		{% for post in posts %}
+			<div>
+				<p>published: {{ post.published_date }}</p>
+				<h1><a href="">{{ post.title }}</a></h1>
+				<p>{{ post.text|linebreaksbr }}</p>
+			</div>
+		{% endfor %}
 		<div>
 			<h1><a href="">Simple Blog</a></h1>
 		</div>
@@ -13,7 +20,12 @@
 			<p>Is this still working???</p>
 		</div>
 		
-		
+		<div>
+			<p>published: 12/6/2016
+			<h3><a href="">My second post</a></h2>
+			<p>Can this work now?</p>
+			
+		</div>
 		<p>Hey There!</p>
 		<p>Working???</p>
 	</body>
